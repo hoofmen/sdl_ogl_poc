@@ -9,11 +9,12 @@ Simple 3D POC using SDL and OpenGL
 
 ### How to Build
 Go to the root directory where main.cpp file is located and run:
- --  On MAC (`must have Xcode and the SDL.framework installed`)
+
+**On MAC** (`must have Xcode and the SDL.framework installed`)
 ```sh
 $ g++ -framework SDL -framework OpenGL main.cpp -o sdl_ogl_poc
 ```
--- On GNU/Linux (`must have c++/g++, SDL 1.2 and OpenGL installed`)
+**On GNU/Linux** (`must have c++/g++, SDL 1.2 and OpenGL installed`)
 ```sh
 $ g++ `sdl-config --cflags --libs` -lGL -lGLU main.cpp -o sdl_ogl_poc 
 ``` 
