@@ -11,7 +11,6 @@
 #include <stdlib.h>
 
 #include <SDL/SDL.h>
-#include <SDL_image/SDL_image.h>
 
 #include <OpenGL/gl.h>
 #include <OpenGL/glu.h>
@@ -60,8 +59,6 @@ int initiateSDL(int w, int h, char *caption){
 }
 
 int createTexture(char *img){
-    //IMG_Init(IMG_INIT_JPG);
-    //SDL_Surface *image = IMG_Load(img);
     SDL_Surface *image = SDL_LoadBMP(img);
     
     if (!image) {
@@ -138,7 +135,6 @@ int main(int argc, char *argv[]) {
         renderScene();
     }
     
-    //IMG_Quit();
     SDL_Quit();
     return 0;
     
