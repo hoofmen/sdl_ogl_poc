@@ -14,8 +14,8 @@ Go to the root directory where main.cpp file is located and run:
 ```sh
 $ g++ -framework SDL -framework OpenGL main.cpp -o sdl_ogl_poc
 ```
-**On GNU/Linux** (`must have c++/g++, SDL 1.2 and OpenGL installed`)
+**On GNU/Linux** (`must have c++/g++, SDL 1.2 and OpenGL installed (tested on Ubuntu 16.04`)
 ```sh
-$ g++ `sdl-config --cflags --libs` -lGL -lGLU main.cpp -o sdl_ogl_poc 
+$ g++ main.cpp -std=gnu++11 -lSDL -lGL -lGLU -o sdl_ogl_poc
 ``` 
 

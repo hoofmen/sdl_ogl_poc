@@ -12,8 +12,15 @@
 
 #include <SDL/SDL.h>
 
+#ifdef __APPLE__
 #include <OpenGL/gl.h>
 #include <OpenGL/glu.h>
+#else
+#include <GL/gl.h>
+#include <GL/glu.h>
+#endif
+
+
 
 // float variable to rotate the 3D shape
 float rot = 0.0f;
@@ -62,7 +69,7 @@ int createTexture(char *img){
     SDL_Surface *image = SDL_LoadBMP(img);
     
     if (!image) {
-        printf("Could not find the image: %s\n", image);
+        printf("Could not find the image: %s\n", img);
         return 0;
     }
     
